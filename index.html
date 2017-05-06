@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>RPS</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+	<div class="container">
+		<div id="header" class="row ver-spacer">
+			<div id="logo" class="logo">
+				<img src="assets/images/logo.png" class="img-responsive" alt="Logo">
+			</div>
+		</div>
+		
+		<div class="row status ver-spacer">
+			<p><span id="game-players"></span> people are playing this game.</p>
+		</div>
+
+		<div id="startrow" class="row ver-spacer">
+			<div id="startfrm" class="center-block">
+				<form id="nameinput" class="form-inline">
+					<input type="text" class="form-control" id="player-name" placeholder="Your name!">
+					<button id="start" type="button" class="btn btn-default">Start</button>
+				</form>
+			</div>
+		</div>
+
+		<div id="gamerow" class="row ver-spacer">
+
+			<div class="col-xs-4 players player1 frames">
+				<h3 class="player-no playerno1">&#9312;</h3>
+				<p class="waiting">Waiting for Player 1 ...</p>
+				<div id="player1" class="hide">
+					<div class="row">
+						<div class="col-xs-9">
+							<img src="assets/images/player1.png" class="img-responsive playerimg" alt="Player 1">
+							<h2 class="playername" id="playername1">Amir</h2>
+						</div>
+						<div class="col-xs-3">
+							<div class="row">
+								<div class="rps">
+									<img src="assets/images/rock1.png" class="img-responsive" value="r" title="Rock" alt="Rock">
+								</div>
+							</div>
+							<div class="row">
+								<div class="rps">
+									<img src="assets/images/paper1.png" class="img-responsive" value="p" title="Paper" alt="Paper">
+								</div>
+							</div>
+							<div class="row">
+								<div class="rps">
+									<img src="assets/images/scissors1.png" class="img-responsive" value="s" title="Scissors" alt="Scissors">
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="scores center-block">
+							<img src="assets/images/win.png" class="" title="Wins" alt="Wins">
+							<span id="wins1" class="score">0</span>
+							<font class="spacer">&mdash;</font>
+							<span id="loses1" class="score">0</span>
+							<img src="assets/images/win.png" class="loseicon" title="Loses" alt="Loses">
+						</div>
+					</div>
+				</div>
+			</div><!-- player1 col -->
+
+			<div class="col-xs-4 text-center">
+				<div id="status" class="status frames">
+					<img id="rpsimg" src="assets/images/rps.png" class="img-responsive" alt="RPS">
+					<div id="statusblock" class="hide">
+				  	<div class="row">
+							<p id="namelbl" class="statustxt">Hi Amir! You are Player 1</p>
+						</div>
+						<div class="row">
+							<p id="turnlbl" class="statustxt">Waiting for Ahmed to choose.</p>
+						</div>
+						<div class="row">
+							<img id="choice1" src="assets/images/rock1.png" class="col-xs-offset-2 col-xs-4 img-responsive" title="Rock" alt="Player 1 choice">
+							<img id="choice2" src="assets/images/paper2.png" class="col-xs-4 img-responsive" title="Paper" alt="Player 2 choice">
+						</div>
+						<div class="row">
+							<p id="winnertxt"><span id="winner">Amir</span><br>Wins!</p>
+						</div>
+					</div>
+				</div>
+			</div> <!-- status col -->
+
+			<div class="col-xs-4 players player2 frames avoid-clicks">
+				<h3 class="player-no playerno2">&#9313;</h3>
+				<p class="waiting">Waiting for Player 2 ...</p>
+				<div id="player2" class="hide">
+					<div class="row">
+						<div class="col-xs-9 col-xs-push-3">
+							<img src="assets/images/player2.png" class="img-responsive playerimg" alt="Player 2">
+							<h2 class="playername" id="playername2">Ali</h2>
+						</div>
+						<div class="col-xs-3 col-xs-pull-9">
+							<div class="row">
+								<div class="rps">
+									<img src="assets/images/rock2.png" class="img-responsive" value="r" title="Rock" alt="Rock">
+								</div>
+							</div>
+							<div class="row">
+								<div class="rps">
+									<img src="assets/images/paper2.png" class="img-responsive" value="p" title="Paper" alt="Paper">
+								</div>
+							</div>
+							<div class="row">
+								<div class="rps">
+									<img src="assets/images/scissors2.png" class="img-responsive" value="s" title="Scissors" alt="Scissors">
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="scores center-block">
+							<img src="assets/images/win.png" class="" title="Wins" alt="Wins">
+							<span id="wins2" class="score">0</span>
+							<font class="spacer">&mdash;</font>
+							<span id="loses2" class="score">0</span>
+							<img src="assets/images/win.png" class="loseicon" title="Loses" alt="Loses">						
+						</div>
+					</div>
+				</div>
+			</div><!-- player2 col -->
+
+		</div> <!-- row -->
+
+		<div id="chatrow" class="row">
+			<div id="chatfrm" class="center-block">
+					<textarea id="chat" rows="5" class="form-control" readonly></textarea>
+				<form class="form-inline">
+					<input type="text" class="form-control" id="message" placeholder="Write your message!">
+					<button type="button" class="btn btn-default">Send</button>
+				</form>
+			</div>
+		</div>
+	</div><!-- container -->
+	<div class="footer">
+		<div class="container">
+			<p class="text-center">&copy; Copyright <script>document.write(new Date().getFullYear())</script> Amir Izadpanah</p>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>  
+	<script src="assets/scripts/app.js"></script>
+</body>
+</html>
