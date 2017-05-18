@@ -15,7 +15,7 @@ hr{
 	margin-bottom: 10px;
 }
 #startfrm{
-	width: 260px;
+	width: 300px;
 }
 .gamediv{
 	
@@ -23,7 +23,7 @@ hr{
 .ver-spacer {
 	margin-bottom: 20px;
 }
-#chatfrm{
+#chatdiv{
 	width: 70%;
 }
 .scores{
@@ -81,16 +81,20 @@ hr{
 	font-size: 20px;
 	line-height: 250px;
 }
-.rps img{
+.rps {
 	cursor: pointer;
 }
-.selected{
+.selected {
 	background-color: #999;
 	border-radius: 5px;	
 }
+.avoid-clicks {
+	cursor: none;
+  pointer-events: none;
+}
 .loseicon{
-	-webkit-transform:rotate(180deg);
-	        transform:rotate(180deg);
+	-webkit-transform:rotate(180deg) scaleX(-1);
+	        transform:rotate(180deg) scaleX(-1);
 }
 .status{
 	color: #ffcc01;
@@ -101,36 +105,39 @@ hr{
 .status .row{
 	margin: 10px 0;
 }
-.status p{
+p{
 	margin: 0;
 }
 .statustxt{
 	font-size: 1.2em;
 	text-align: center;
 }
-#winnertxt{
+
+#winnerdiv{
 	font-size: 3em;
 	letter-spacing: 4px;
 }
+#play{
+	width: 100px !important;
+}
 input[type="text"]{
-	width: calc(100% - 65px) !important;
+	width: calc(100% - 70px) !important;
 }
 button{
 	width: 60px !important;
 }
-input[type="text"], textarea, button{
+input[type="text"], button{
 	letter-spacing: 2px;
 }
-.avoid-clicks {
-  pointer-events: none;
-}
 #chat{
+	width: 100%;
+	height: 120px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	padding: 6px;
+	overflow: auto;
 	margin-bottom: 5px;
 }
-
-
-
-
 
 .footer {
 	background-color: #666;
