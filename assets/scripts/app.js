@@ -67,7 +67,7 @@ rpsRef.on('value',function(snapshot){
 		}
 
 		if(p1 && p2){
-			authorized = pName !== '' ? true : false;
+			authorized = pName !== '';
 			if (authorized){
 				if( choice1 !== '' && choice2 !== ''){
 					rps.calcWinner(choice1, choice2);
